@@ -16,11 +16,11 @@ hr {
     overflow-wrap: break-word;
     overflow-y: auto;
     overflow-x: hidden;
+    margin-left: -30px;
+    margin-right: -30px;
 }
 
 .items > * {
-    margin-left: -30px;
-    margin-right: -30px;
     transition: 0.25s;
     cursor: pointer;
     padding: 5px 30px;
