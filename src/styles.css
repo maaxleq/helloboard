@@ -20,7 +20,11 @@ input, p {
     margin: 0px 0px;
 }
 
-p.small-text {
+input.text-bigger, p.text-bigger {
+    font-size: 40px;
+}
+
+input.text-smaller, p.text-smaller {
     font-size: 20px;
 }
 
@@ -32,16 +36,23 @@ p.small-text {
     text-transform: uppercase;
 }
 
-@media (orientation: portrait) {
+@media (orientation: portrait), (max-height: 600px) {
     input, p {
         font-size: 20px;
     }
 
-    p.small-text {
+    input.text-bigger, p.text-bigger {
+        font-size: 25px;
+    }
+
+    input.text-smaller, p.text-smaller {
+        font-size: 15px;
+    }
+
+    input.text-smaller-if-portrait, p.text-smaller-if-portrait {
         font-size: 15px;
     }
     
-
     .first-letter-bigger::first-letter {
         font-size: 25px;
     }
