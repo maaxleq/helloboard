@@ -1,0 +1,7 @@
+<div class="container">
+    <input type="text" [(ngModel)]="currentItem" placeholder="{{ question }}" (keydown.enter)="add()">
+    <hr>
+    <div class="items">
+        <p class="first-letter-uppercase small-text" *ngFor="let item of items" (click)="remove(item)">{{ item }}</p>
+    </div>
+</div>

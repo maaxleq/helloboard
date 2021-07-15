@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    background-color: #212121;
+}
+
+input {
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+input, p {
+    font-size: 30px;
+    margin: 0px 0px;
+}
+
+p.small-text {
+    font-size: 20px;
+}
+
+.first-letter-bigger::first-letter {
+    font-size: 35px;
+}
+
+.first-letter-uppercase::first-letter {
+    text-transform: uppercase;
+}
+
+@media (orientation: portrait) {
+    input, p {
+        font-size: 20px;
+    }
+
+    p.small-text {
+        font-size: 15px;
+    }
+    
+
+    .first-letter-bigger::first-letter {
+        font-size: 25px;
+    }
+}
