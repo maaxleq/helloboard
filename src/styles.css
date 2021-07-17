@@ -28,6 +28,14 @@ input.text-smaller, p.text-smaller {
     font-size: 20px;
 }
 
+input.text-giant, p.text-giant {
+    font-size: 50px;
+}
+
+input.text-tiny, p.text-tiny {
+    font-size: 16px;
+}
+
 .first-letter-bigger::first-letter {
     font-size: 35px;
 }
@@ -48,6 +56,15 @@ input.text-smaller, p.text-smaller {
     input.text-smaller, p.text-smaller {
         font-size: 15px;
     }
+
+    input.text-giant, p.text-giant {
+        font-size: 30px;
+    }
+
+    input.text-tiny, p.text-tiny {
+        font-size: 12px;
+    }
+    
 
     input.text-smaller-if-portrait, p.text-smaller-if-portrait {
         font-size: 15px;

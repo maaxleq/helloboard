@@ -1,3 +1,23 @@
-<div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-    <p style="font-size: 50px;">WEATHER COMING SOON</p>
+<div class="container">
+    <div id="top-row">
+        <div id="top-left-col">
+            <input id="city-input" type="text" (input)="refresh()" [(ngModel)]="city" placeholder="Enter your city">
+            <p class="text-giant" *ngIf="weather">{{ weather.temp }}°C</p>
+            <p class="text-smaller" *ngIf="weather">{{ weather.weather }}</p>
+        </div>
+        <div class="no-display-if-portrait" id="top-right-col" *ngIf="weather">
+            <p class="text-smaller"><span>wind speed: </span><span>{{ weather.wind_speed }} km/h</span></p>
+            <p class="text-smaller"><span>humidity: </span><span>{{ weather.humidity }}%</span></p>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div *ngIf="forecast" id="bottom-row">
+            <div class="forecast-unit" *ngFor="let w of forecast">
+                <p class="text-tiny">{{ getFormattedDateOfTimestamp(w.timestamp) }}</p>
+                <p class="text-tiny">{{ getFormattedTimeOfTimestamp(w.timestamp) }}</p>
+                <p class="text-tiny">{{ w.temp }}°C</p>
+            </div>
+        </div>
+    </div>
 </div>
