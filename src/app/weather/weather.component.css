@@ -63,5 +63,10 @@ hr {
 @media (orientation: portrait), (max-height: 600px) {
     #bottom-row {
         width: calc(100vw - 100px);
+        padding-bottom: 5px;
+    }
+
+    #bottom-row::-webkit-scrollbar {
+        height: 3px;
     }
 }
