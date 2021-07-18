@@ -88,7 +88,7 @@ export class WeatherComponent implements OnInit {
 
     private saveWeather(){
         if (this.weather){
-            this.weather = this.localStorageService.setWeather(this.weather);
+            this.localStorageService.setWeather(this.weather);
         }
         else {
             this.localStorageService.clearWeather();
@@ -97,7 +97,7 @@ export class WeatherComponent implements OnInit {
 
     private saveForecast(){
         if (this.forecast){
-            this.forecast = this.localStorageService.setForecast(this.forecast);
+            this.localStorageService.setForecast(this.forecast);
         }
         else {
             this.localStorageService.clearForecast();

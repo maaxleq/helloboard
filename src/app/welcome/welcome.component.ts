@@ -25,7 +25,7 @@ export class WelcomeComponent implements OnInit {
     }
 
     saveName(): void {
-        this.name = this.localStorageService.setName(this.name);
+        this.localStorageService.setName(this.name);
     }
 
     getFormattedDate(): string {
