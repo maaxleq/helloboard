@@ -24,6 +24,10 @@ hr {
     overflow-x: auto;
 }
 
+#top-left-col {
+    max-width: 60%;
+}
+
 .forecast-unit {
     display: flex;
     flex-direction: column;
