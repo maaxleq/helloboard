@@ -4,4 +4,7 @@
     <hr>
     <p *ngIf="date">{{ getFormattedDate() }}</p>
     <p *ngIf="date">{{ getFormattedTime() }}</p>
+    <div id="icons">
+        <mat-icon (click)="switchUi()">{{ getUiIconName() }}</mat-icon>
+    </div>
 </div>

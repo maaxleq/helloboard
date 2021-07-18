@@ -1,4 +1,5 @@
 .container {
+    position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -7,4 +8,19 @@
 
 hr {
     width: 100%;
+}
+
+#icons {
+    position: absolute;
+    z-index: 999;
+    right: 0px;
+    top: 0px;
+}
+
+#icons > * {
+    cursor: pointer;
+}
+
+#icons > *::selection {
+    background-color: transparent;
 }

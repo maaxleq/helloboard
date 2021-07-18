@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { LocalStorageService } from '../services/local-storage.service';
+import { Ui } from '../models/ui';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-welcome',
@@ -10,6 +12,8 @@ export class WelcomeComponent implements OnInit {
 
     name: string = "";
     date?: Date;
+    @Input() ui: Ui = "light";
+    @Output() changeUiEvent = new EventEmitter<Ui>();
 
     constructor(
         private localStorageService: LocalStorageService
@@ -22,6 +26,21 @@ export class WelcomeComponent implements OnInit {
         setInterval(() => {
             this.date = new Date();
         }, 1000);
+    }
+
+    switchUi(): void {
+        if (this.ui === "light"){
+            this.ui = "dark";
+        }
+        else {
+            this.ui = "light";
+        }
+
+        this.changeUiEvent.emit(this.ui);
+    }
+
+    getUiIconName(): string {
+        return `${this.ui}_mode`;
     }
 
     saveName(): void {

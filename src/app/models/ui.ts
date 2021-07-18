@@ -1,0 +1,1 @@
+export type Ui = "light" | "dark";

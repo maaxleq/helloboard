@@ -3,15 +3,27 @@ html, body {
     margin: 0px;
 }
 
-body {
+#dashboard.light {
     background-color: #e0e0e0;
 }
 
-input {
+#dashboard.dark {
+    background-color: #212121;
+}
+
+#dashboard.light input {
     background: none;
     box-shadow: none;
     border: none;
     color: black;
+    outline: none;
+}
+
+#dashboard.dark input {
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: white;
     outline: none;
 }
 

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Weather } from '../models/weather';
+import { Ui } from '../models/ui';
 
 @Injectable({
     providedIn: 'root'
@@ -128,5 +129,15 @@ export class LocalStorageService {
 
     clearForecast() {
         localStorage.removeItem("forecast");
+    }
+
+    setUi(ui: Ui): Ui {
+        localStorage.setItem("ui", ui);
+
+        return ui;
+    }
+
+    getUi(): Ui | null {
+        return localStorage.getItem("ui") as Ui;
     }
 }
