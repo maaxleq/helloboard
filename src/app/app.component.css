@@ -15,11 +15,12 @@
 
 /* Ruleset for tile styling */
 #dashboard > * {
-    background-color: #212121;
-    border: 1px solid #484848e5;
-    border-radius: 10px;
+    background-color: #e0e0e0;
+    border-radius: 25px;
     font-family: "Rubik", sans-serif;
-    color: white;
+    color: black;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
 }
 
 @media (orientation: portrait), (max-height: 600px) {

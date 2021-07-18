@@ -4,14 +4,14 @@ html, body {
 }
 
 body {
-    background-color: #212121;
+    background-color: #e0e0e0;
 }
 
 input {
     background: none;
     box-shadow: none;
     border: none;
-    color: white;
+    color: black;
     outline: none;
 }
 
