@@ -31,7 +31,7 @@ export class WeatherComponent implements OnInit {
     getFormattedDateOfTimestamp(timestamp: number): string {
         const date = new Date(timestamp * 1000);
 
-        let month = date.getMonth().toString();
+        let month = (date.getMonth() + 1).toString();
         if (month.length === 1) {
             month = `0${month}`;
         }

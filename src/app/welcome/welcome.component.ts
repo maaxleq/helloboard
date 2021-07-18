@@ -32,7 +32,7 @@ export class WelcomeComponent implements OnInit {
         if (this.date) {
             let year = this.date.getFullYear().toString();
 
-            let month = this.date.getMonth().toString();
+            let month = (this.date.getMonth() + 1).toString();
             if (month.length === 1) {
                 month = `0${month}`;
             }
