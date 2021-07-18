@@ -2,17 +2,21 @@
     <div id="top-row">
         <div id="top-left-col">
             <input id="city-input" type="text" (input)="refresh()" [(ngModel)]="city" placeholder="Enter your city">
-            <p class="text-giant" *ngIf="weather">{{ weather.temp }}°C</p>
-            <p class="text-smaller" *ngIf="weather">{{ weather.weather }}</p>
+            <div *ngIf="canDisplayWeather()">
+                <p class="text-giant" *ngIf="weather">{{ weather.temp }}°C</p>
+                <p class="text-smaller" *ngIf="weather">{{ weather.weather }}</p>
+            </div>
         </div>
-        <div class="no-display-if-portrait" id="top-right-col" *ngIf="weather">
-            <p class="text-smaller"><span>wind speed: </span><span>{{ weather.wind_speed }} km/h</span></p>
-            <p class="text-smaller"><span>humidity: </span><span>{{ weather.humidity }}%</span></p>
+        <div class="no-display-if-portrait" id="top-right-col" *ngIf="canDisplayWeather()">
+            <div *ngIf="weather">
+                <p class="text-smaller"><span>wind speed: </span><span>{{ weather.wind_speed }} km/h</span></p>
+                <p class="text-smaller"><span>humidity: </span><span>{{ weather.humidity }}%</span></p>
+            </div>
         </div>
     </div>
     <hr>
     <div>
-        <div *ngIf="forecast" id="bottom-row">
+        <div *ngIf="canDisplayWeather()" id="bottom-row">
             <div class="forecast-unit" *ngFor="let w of forecast">
                 <p class="text-tiny">{{ getFormattedDateOfTimestamp(w.timestamp) }}</p>
                 <p class="text-tiny">{{ getFormattedTimeOfTimestamp(w.timestamp) }}</p>
