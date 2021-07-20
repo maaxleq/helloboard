@@ -11,6 +11,8 @@ hr {
 }
 
 #icons {
+    display: flex;
+    align-items: center;
     position: absolute;
     z-index: 999;
     right: 0px;
@@ -23,4 +25,14 @@ hr {
 
 #icons > *::selection {
     background-color: transparent;
+}
+
+#gitlab-link {
+    width: 40px;
+    height: 40px;
+}
+
+#gitlab-link > * {
+    width: 40px;
+    height: 40px;
 }
