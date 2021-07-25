@@ -5,6 +5,11 @@
     <p *ngIf="date">{{ getFormattedDate() }}</p>
     <p *ngIf="date">{{ getFormattedTime() }}</p>
     <div id="icons">
+        <a id="gitlab-link" href="https://gitlab.com/maaxleq/helloboard" target="_blank" rel="noopener noreferrer" (mouseover)="onHoverGitlab()" (mouseleave)="onLeaveGitlab()">
+            <img class="icon-link" *ngIf="ui === 'light' && hoveringGitlab === false" src="assets/gitlab_dark.svg">
+            <img class="icon-link" *ngIf="ui === 'dark' && hoveringGitlab === false" src="assets/gitlab_light.svg">
+            <img class="icon-link" *ngIf="hoveringGitlab === true" src="assets/gitlab_color.svg">
+        </a>
         <mat-icon (click)="switchUi()">{{ getUiIconName() }}</mat-icon>
     </div>
 </div>

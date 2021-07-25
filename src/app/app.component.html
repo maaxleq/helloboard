@@ -1,6 +1,6 @@
 <div id="dashboard" [class]="ui">
     <app-welcome [ui]="ui" (changeUiEvent)="setUi($event)"></app-welcome>
     <app-weather></app-weather>
-    <app-list [question]="todoQuestion" [repository]="todoRepository"></app-list>
-    <app-list [question]="notesQuestion" [repository]="notesRepository"></app-list>
+    <app-list [ui]="ui" [question]="todoQuestion" [repository]="todoRepository"></app-list>
+    <app-list [ui]="ui" [question]="notesQuestion" [repository]="notesRepository"></app-list>
 </div>

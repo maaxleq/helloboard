@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { LocalStorageService } from '../services/local-storage.service';
+import { Ui } from '../models/ui';
 
 @Component({
     selector: 'app-list',
@@ -11,6 +12,7 @@ export class ListComponent implements OnInit {
     @Input() repository?: string;
     currentItem: string = "";
     items: string[] = [];
+    @Input() ui: Ui = "light";
 
     constructor(
         private localStorageService: LocalStorageService

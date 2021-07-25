@@ -13,6 +13,7 @@ export class WelcomeComponent implements OnInit {
 
     name: string = "";
     date?: Date;
+    hoveringGitlab = false;
     @Input() ui: Ui = "light";
     @Output() changeUiEvent = new EventEmitter<Ui>();
 
@@ -28,6 +29,14 @@ export class WelcomeComponent implements OnInit {
         setInterval(() => {
             this.date = new Date();
         }, 1000);
+    }
+
+    onHoverGitlab(){
+        this.hoveringGitlab = true;
+    }
+
+    onLeaveGitlab(){
+        this.hoveringGitlab = false;
     }
 
     switchUi(): void {
