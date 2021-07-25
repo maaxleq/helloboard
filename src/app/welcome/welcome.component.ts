@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { LocalStorageService } from '../services/local-storage.service';
 import { Ui } from '../models/ui';
 import { Output, EventEmitter } from '@angular/core';
+import { GreeterService } from '../services/greeter.service';
 
 @Component({
     selector: 'app-welcome',
@@ -16,7 +17,8 @@ export class WelcomeComponent implements OnInit {
     @Output() changeUiEvent = new EventEmitter<Ui>();
 
     constructor(
-        private localStorageService: LocalStorageService
+        private localStorageService: LocalStorageService,
+        private greeterService: GreeterService,
     ) { }
 
     ngOnInit(): void {
@@ -37,6 +39,15 @@ export class WelcomeComponent implements OnInit {
         }
 
         this.changeUiEvent.emit(this.ui);
+    }
+
+    getGreetMessage(): string | undefined{
+        if (this.date){
+            return this.greeterService.getGreetMessage(this.date.getHours());
+        }
+        else {
+            return undefined;
+        }
     }
 
     getUiIconName(): string {

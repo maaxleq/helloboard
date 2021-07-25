@@ -1,5 +1,5 @@
 <div class="container">
-    <p class="first-letter-bigger">Welcome,</p>
+    <p class="first-letter-bigger">{{ getGreetMessage() }},</p>
     <input id="name-input" type="text" (input)="saveName()" [(ngModel)]="name" placeholder="Enter your name">
     <hr>
     <p *ngIf="date">{{ getFormattedDate() }}</p>
